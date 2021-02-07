@@ -1,0 +1,35 @@
+{
+  "name": "like-syntax-support",
+  "displayName": "Like Syntax Support",
+  "description": "Syntax support the the Like language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.53.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "like",
+        "aliases": [
+          "Like",
+          "like"
+        ],
+        "extensions": [
+          ".pt",
+          ".like"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "like",
+        "scopeName": "source.like",
+        "path": "./syntaxes/like.tmLanguage.json"
+      }
+    ]
+  }
+}
