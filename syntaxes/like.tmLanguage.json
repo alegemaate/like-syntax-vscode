@@ -10,6 +10,9 @@
       "name": "keyword.function.like"
     },
     {
+      "include": "#multilinecomments"
+    },
+    {
       "include": "#strings"
     },
     {
@@ -34,9 +37,36 @@
     {
       "match": "\\b(true|false)\\b",
       "name": "constant.language.like"
+    },
+    {
+      "match": "\\b(true|false)\\b",
+      "name": "constant.language.like"
+    },
+    {
+      "include": "#delimiters"
     }
   ],
   "repository": {
+    "multilinecomments": {
+      "name": "comment.line.like",
+      "patterns": [
+        {
+          "name": "comment.block.like",
+          "begin": "(\\/\\*)",
+          "beginCaptures": {
+            "1": {
+              "name": "punctuation.definition.comment.like"
+            }
+          },
+          "end": "(\\*\\/)",
+          "endCaptures": {
+            "1": {
+              "name": "punctuation.definition.comment.like"
+            }
+          }
+        }
+      ]
+    },
     "keywords": {
       "patterns": [
         {
@@ -108,6 +138,22 @@
         {
           "match": "\\[|\\]",
           "name": "punctuation.definition.bracket.square.like"
+        }
+      ]
+    },
+    "delimiters": {
+      "patterns": [
+        {
+          "match": ",",
+          "name": "punctuation.other.comma.like"
+        },
+        {
+          "match": ":",
+          "name": "punctuation.other.colon.like"
+        },
+        {
+          "match": ";",
+          "name": "punctuation.other.semicolon.like"
         }
       ]
     }
