@@ -6,7 +6,34 @@
       "include": "#keywords"
     },
     {
+      "match": "fun",
+      "name": "keyword.function.like"
+    },
+    {
       "include": "#strings"
+    },
+    {
+      "name": "comment.line.like",
+      "match": "(//.*$)",
+      "captures": {
+        "1": {
+          "name": "punctuation.definition.comment.like"
+        }
+      }
+    },
+    {
+      "include": "#operators"
+    },
+    {
+      "include": "#brackets"
+    },
+    {
+      "match": "(getln|putln|put|get)",
+      "name": "support.function.builtin.like"
+    },
+    {
+      "match": "\\b(true|false)\\b",
+      "name": "constant.language.like"
     }
   ],
   "repository": {
@@ -14,7 +41,7 @@
       "patterns": [
         {
           "name": "keyword.control.like",
-          "match": "\\b(if|or|not|then|else|of|end|file|var|if|while|repeat|choose|elseif|fun|is|like|pkg|public|using|val|when)\\b"
+          "match": "\\b(if|or|not|then|else|of|end|file|var|if|while|repeat|choose|elseif|is|like|pkg|public|using|val|when)\\b"
         }
       ]
     },
@@ -26,6 +53,61 @@
         {
           "name": "constant.character.escape.like",
           "match": "\\\\."
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "match": "\\-\\-",
+          "name": "keyword.operator.decrement.like"
+        },
+        {
+          "match": "\\+\\+",
+          "name": "keyword.operator.increment.like"
+        },
+        {
+          "match": "(==|!=|<=|>=|>|<)",
+          "name": "keyword.operator.comparison.like"
+        },
+        {
+          "match": "(&&|\\|\\||!)",
+          "name": "keyword.operator.logical.like"
+        },
+        {
+          "match": "(=|\\+=|\\-=|\\*=|/=|%=)",
+          "name": "keyword.operator.assignment.like"
+        },
+        {
+          "name": "keyword.operator.arithmetic.like",
+          "match": "(\\+|\\-|\\*|/|%)"
+        }
+      ]
+    },
+    "brackets": {
+      "patterns": [
+        {
+          "begin": "\\(",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.begin.bracket.round.like"
+            }
+          },
+          "end": "\\)",
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.end.bracket.round.like"
+            }
+          },
+          "patterns": [
+            {
+              "include": "$self"
+            }
+          ]
+        },
+        {
+          "match": "\\[|\\]",
+          "name": "punctuation.definition.bracket.square.like"
         }
       ]
     }
