@@ -9,6 +9,11 @@
   "categories": [
     "Programming Languages"
   ],
+  "publisher": "AllanLegemaate",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alegemaate/like-syntax-support"
+  },
   "contributes": {
     "languages": [
       {
