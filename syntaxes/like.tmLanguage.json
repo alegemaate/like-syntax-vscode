@@ -6,8 +6,18 @@
       "include": "#keywords"
     },
     {
-      "match": "fun",
-      "name": "keyword.function.like"
+      "include": "#primitives"
+    },
+    {
+      "match": "\\b(fun)\\s+([\\w]+)\\b",
+      "captures": {
+        "1": {
+          "name": "storage.type.function.like"
+        },
+        "2": {
+          "name": "entity.name.function.like"
+        }
+      }
     },
     {
       "include": "#multilinecomments"
@@ -31,7 +41,7 @@
       "include": "#brackets"
     },
     {
-      "match": "(getln|putln|put|get)",
+      "match": "\\b(getln|putln|put|get)\\b",
       "name": "support.function.builtin.like"
     },
     {
@@ -44,6 +54,14 @@
     },
     {
       "include": "#delimiters"
+    },
+    {
+      "match": "\\b[0-9]+\\b",
+      "captures": {
+        "0": {
+          "name": "constant.numeric.number.like"
+        }
+      }
     }
   ],
   "repository": {
@@ -71,7 +89,15 @@
       "patterns": [
         {
           "name": "keyword.control.like",
-          "match": "\\b(if|or|not|then|else|of|end|file|var|if|while|repeat|choose|elseif|is|like|pkg|public|using|val|when)\\b"
+          "match": "\\b(if|or|not|then|else|of|end|file|if|while|repeat|choose|elseif|is|like|pkg|public|using|when)\\b"
+        }
+      ]
+    },
+    "primitives": {
+      "patterns": [
+        {
+          "name": "storage.type.primitive.like",
+          "match": "\\b(var|val)\\b"
         }
       ]
     },
@@ -111,6 +137,10 @@
         {
           "name": "keyword.operator.arithmetic.like",
           "match": "(\\+|\\-|\\*|/|%)"
+        },
+        {
+          "match": "(\\||#)",
+          "name": "keyword.operator.string.like"
         }
       ]
     },
@@ -132,6 +162,10 @@
           "patterns": [
             {
               "include": "$self"
+            },
+            {
+              "match": "\\w",
+              "name": "variable.parameter"
             }
           ]
         },

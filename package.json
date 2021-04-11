@@ -1,14 +1,21 @@
 {
-  "name": "like-syntax-support",
+  "name": "like-syntax-vscode",
   "displayName": "Like Syntax Support",
   "description": "Syntax support the the Like language",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.53.0"
   },
   "categories": [
     "Programming Languages"
   ],
+  "preview": true,
+  "publisher": "alegemaate",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alegemaate/like-syntax-vscode"
+  },
+  "icon": "images/like.png",
   "contributes": {
     "languages": [
       {
