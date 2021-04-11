@@ -1,4 +1,4 @@
-# S/SL Syntax Support VSCODE
+# Like Syntax Support VSCODE
 
 This extension adds basic support to VS Code for the Like programming langauge developed by students at Queen's University for CISC/CMPE 458/858.
 
