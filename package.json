@@ -2,7 +2,7 @@
   "name": "like-syntax-vscode",
   "displayName": "Like Syntax Support",
   "description": "Syntax support the the Like language",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "engines": {
     "vscode": "^1.53.0"
   },
