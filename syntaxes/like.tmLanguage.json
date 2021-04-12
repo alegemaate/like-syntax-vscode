@@ -41,7 +41,7 @@
       "include": "#brackets"
     },
     {
-      "match": "\\b(getln|putln|put|get)\\b",
+      "match": "\\b(reset|rewrite|getln|putln|put|get|chr|ord|eoln|eof|assign)\\b",
       "name": "support.function.builtin.like"
     },
     {
@@ -89,7 +89,7 @@
       "patterns": [
         {
           "name": "keyword.control.like",
-          "match": "\\b(if|or|not|then|else|of|end|file|if|while|repeat|choose|elseif|is|like|pkg|public|using|when)\\b"
+          "match": "\\b(if|or|not|then|else|of|end|file|if|while|repeat|choose|elseif|is|like|public|using|when)\\b"
         }
       ]
     },
@@ -97,7 +97,7 @@
       "patterns": [
         {
           "name": "storage.type.primitive.like",
-          "match": "\\b(var|val)\\b"
+          "match": "\\b(var|val|pkg)\\b"
         }
       ]
     },
